@@ -1,19 +1,19 @@
-# Closures Lab
-
-## Objectives
-+ Use closures to customize functions
-+ Use closures as a mechanism of encapsulations
-
 ## Instructions
 
-In the lab that follows, practice using closures to construct functions that have reference to variables that the execution scope does not.  
+In this lab you will find something else when you run `learn-test`.  When you run `learn-test` you will first see some HTML that we wrote in `index.html`, which represents information from a competitor of Scuber.  You will still see your tests underneath this HTML `learn-test`.  We'll be testing against this `index.html` document, but you should still write your code in `index.js`. You will write the following functions, to pull information about neighborhoods that the competitor lists as popular, and about the it's future strategy.  Write the following functions:
 
-Create the following functions:
+- Define a function `getFirstSelector(selector)`, which accepts a selector and returns the first element that matches.
+- Define a function `rankedLis()` that retrieves the list elements from the first two unordered list groups, but not the second one. Remember that `#` is used for IDs in selectors and `.` is used for class selectors — but you knew that from the previous lessons and because you [read the docs](https://developer.mozilla.org/en-US/docs/Web/Guide/CSS/Getting_Started/Selectors), right? :) ).
 
-  + produceDrivingRange() - Returns a function that then calculates whether blocks are for a specific range.  For example, `produceDrivingRange(10)` returns a function that we can then pass a starting and ending block to.  If the starting anding blocks are further than 10 blocks away, our returned function will tell us.   
-  + produceTipCalculator() - Returns a function that then calculates a tip.  For example, `produceTipCalculator(.10)` returns a function that calculates ten percent tip on a fare.  `produceTipCalculator(.20)` returns a function that calculates twenty percent tip on a fare.
-  + `createDriver` returns a function that returns a class that produces a Driver class.  The class has reference to a driverId that is incremented each time a new driver is created.  The rest of the code base does not have access to driverId.  
+- Define a function `companyStrategy()` that pulls out the most deeply nested child
+from `div#grand-node`. (As an extra challenge, you can implement your function in such a way that it will always retrieve the most deeply nested child.  You may want to look up breadth first search for an idea of how to do this.)
 
-The functions should make use of closures to achieve the specified goals.
+Have fun, and good luck!
 
-<p class='util--hide'>View <a href='https://learn.co/lessons/js-advanced-scope-closures-lab' title='Advanced Scope Closures Lab'>Advanced Scope Closures Lab</a> on Learn.co and start learning to code for free.</p>
+## Resources
+
+- [document.querySelector()](https://developer.mozilla.org/en-US/docs/Web/API/Document/querySelector)
+- [document.querySelectorAll()](https://developer.mozilla.org/en-US/docs/Web/API/Document/querySelectorAll)
+- [parseInt()](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/parseInt)
+- [Selectors](https://developer.mozilla.org/en-US/docs/Web/Guide/CSS/Getting_Started/Selectors)
+- [Breadth First Search](https://en.wikipedia.org/wiki/Breadth-first_search)

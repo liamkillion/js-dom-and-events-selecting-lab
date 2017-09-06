@@ -11,9 +11,43 @@
   </head>
 
   <body>
-    <!-- <div> for Mocha to display test results. -->
-    <div id="mocha"></div>
 
+    <h1> Admin Page of RollerMoves </h1>
+    <main id="app">
+      <h3> Top Locations </h3>
+      <ul class="ranked-list">
+        <li>Downtown</li>
+        <li>Midtown</li>
+      </ul>
+
+      <h3>Other High Performers </h3>
+      <ul class="ranked-list">
+        <li>Financial District</li>
+        <li>Chelsea</li>
+        <li>Flatiron District</li>
+      </ul>
+
+      <h3> New Drivers </h3>
+      <ul class="unranked-list">
+        <li>Meatpacking</li>
+        <li>Upper West Side</li>
+        <li>Harlem</li>
+      </ul>
+
+      <div id="grand-node">
+        <div>
+          <div>
+            <div>
+              <div>
+                We can do it!
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </main>
+
+    <div id="mocha"></div>
     <!-- Include Mocha and set it up for BDD-style testing. -->
     <script src="node_modules/mocha/mocha.js"></script>
     <script>mocha.setup('bdd');</script>
