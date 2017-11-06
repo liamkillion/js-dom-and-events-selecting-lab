@@ -1,6 +1,34 @@
 const expect = chai.expect;
 
 describe('index', () => {
+  describe('selectElementById', function(){
+    it('selects an element by the id', function(){
+      expect(selectElementById('grand-node').id).to.equal('grand-node')
+      expect(selectElementById('app').id).to.equal('app')
+    })
+
+    it('uses getElementById to select the element', function(){
+      let spygetElementById = sinon.spy(document, 'getElementById')
+      selectElementById('grand-node')
+      expect(spygetElementById.calledWith('grand-node')).to.equal(true)
+      spygetElementById.restore()
+    })
+  })
+
+  describe('selectElementsByClassName', function(){
+    it('selects an element by the class name', function(){
+      expect(selectElementsByClassName('unranked-list')[0].className).to.equal('unranked-list')
+      expect(selectElementsByClassName('ranked-list')[0].className).to.equal('ranked-list')
+    })
+
+    it('uses getElementById to select the element', function(){
+      let spygetElementsByClassName = sinon.spy(document, 'getElementsByClassName')
+      selectElementsByClassName('unranked-list')
+      expect(spygetElementsByClassName.calledWith('unranked-list')).to.equal(true)
+      spygetElementsByClassName.restore()
+    })
+  })
+
   describe('getFirstSelector(selector)', () => {
     it('returns the first element that matches the selector', () => {
       expect(getFirstSelector('div').id).to.equal('grand-node')

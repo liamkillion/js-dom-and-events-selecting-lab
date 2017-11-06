@@ -27,5 +27,8 @@
   "homepage": "https://github.com/learn-co-curriculum/js-dom-and-events-selecting-lab#readme",
   "devDependencies": {
     "learn-browser": "^0.1.13"
+  },
+  "dependencies": {
+    "sinon": "^4.1.1"
   }
 }
